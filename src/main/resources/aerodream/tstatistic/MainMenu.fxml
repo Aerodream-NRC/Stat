@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="MainMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: e0e0e0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aerodream.tstatistic.MainController">
+    <children>
+        <TableView fx:id="StatTab" layoutX="-1.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn fx:id="SalesLogin" editable="false" maxWidth="235.0" minWidth="235.0" prefWidth="235.0" resizable="false" text="Логин Сейлза" />
+                <TableColumn fx:id="Dops" editable="false" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" sortable="false" text="Допы">
+                    <columns>
+                        <TableColumn fx:id="ColDopZ" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Заявки" />
+                        <TableColumn fx:id="ColDopP" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Подкл" />
+                    </columns></TableColumn>
+                <TableColumn fx:id="TAs" editable="false" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" sortable="false" text="ТЭ">
+                    <columns>
+                        <TableColumn fx:id="ColTaZ" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Заявки" />
+                        <TableColumn fx:id="ColTaP" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Подкл" />
+                    </columns></TableColumn>
+                <TableColumn fx:id="Poss" editable="false" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" sortable="false" text="ПОС">
+                    <columns>
+                        <TableColumn fx:id="ColPosZ" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Заявки" />
+                        <TableColumn fx:id="ColPosP" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Подкл" />
+                    </columns></TableColumn>
+                <TableColumn fx:id="Dols" editable="false" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" sortable="false" text="Доли">
+                    <columns>
+                        <TableColumn fx:id="ColDolZ" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Заявки" />
+                        <TableColumn fx:id="ColDolP" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Подкл" />
+                    </columns></TableColumn>
+                <TableColumn fx:id="Credits" editable="false" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" resizable="false" sortable="false" text="Кредиты">
+                    <columns>
+                        <TableColumn fx:id="ColCreditZ" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Заявки" />
+                        <TableColumn fx:id="ColCreditVyp" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Выписки" />
+                        <TableColumn fx:id="ColCreditVid" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Выдачи" />
+                    </columns></TableColumn>
+                <TableColumn fx:id="other" editable="false" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" sortable="false" text="Прочее">
+                    <columns>
+                        <TableColumn fx:id="ColOtherZ" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Заявки" />
+                        <TableColumn fx:id="ColOtherP" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" text="Подкл" />
+                    </columns></TableColumn>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
