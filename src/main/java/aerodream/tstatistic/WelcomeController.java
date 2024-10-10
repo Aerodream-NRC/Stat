@@ -22,28 +22,23 @@ public class WelcomeController {
 
     @FXML
     private void ChooseFile(ActionEvent event) {
-        setFileReportPath();
+        FileChooser fileChooser = new FileChooser();
+        File reportFile = fileChooser.showOpenDialog(null);
+        ReportFilePath = reportFile.toURI().toString();
     }
 
     @FXML
     private void LoginSubmit(ActionEvent event) throws IOException {
-        login();
+        getLogin();
         ExcelReader.excelReader();
         MainStage();
     }
 
     static String ReportFilePath;
-    static String login;
 
-    private void setFileReportPath() {
-        FileChooser FC = new FileChooser();
-        File reportFile = FC.showOpenDialog(null);
-        ReportFilePath = reportFile.toURI().toString();
-    }
-
-    private String login() {
-        login = LoginField.getText();
-        return login;
+    private String getLogin() {
+        String loginFieldText = LoginField.getText();
+        return loginFieldText;
     }
 
     private void MainStage() throws IOException {

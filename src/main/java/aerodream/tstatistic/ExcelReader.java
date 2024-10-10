@@ -28,6 +28,7 @@ public class ExcelReader {
     static TreeMap<String, Integer> MapOtherActivations = new TreeMap<>();
 
     protected static void excelReader() throws IOException {
+        ReportFilePath.replaceAll(" ", "");
         StringBuilder stringBuilder = new StringBuilder(ReportFilePath);
         stringBuilder.delete(0, 6);
         String fileReportPath = stringBuilder.toString();
