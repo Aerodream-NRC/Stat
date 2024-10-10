@@ -44,10 +44,10 @@ public class ExcelReader {
             }
         }
         MapAllActivations.remove("Оператор");
-        loginiterator(MapDolyameActivations);
-        loginiterator(MapRentTerminalActivations);
-        loginiterator(MapCustomersCreditActivations);
-        loginiterator(MapOtherActivations);
+        loginIterator(MapDolyameActivations);
+        loginIterator(MapRentTerminalActivations);
+        loginIterator(MapCustomersCreditActivations);
+        loginIterator(MapOtherActivations);
         for (Row row : sheet) {
             Cell cell = row.getCell(0);
             Cell cell1 = row.getCell(6);
@@ -84,7 +84,7 @@ public class ExcelReader {
         MapOtherActivations.remove("Оператор");
     }
 
-    public static void loginiterator(TreeMap m) {
+    public static void loginIterator(TreeMap m) {
         for (Map.Entry<String, Integer> l : MapAllActivations.entrySet()) {
             m.put(l.getKey(), 0);
         }

@@ -79,10 +79,6 @@ public class MainController implements Initializable {
         ColOtherP.setCellValueFactory(new PropertyValueFactory<Sales, Integer>("OtherP"));
 
         for (Map.Entry<String, Integer> k : ExcelReader.MapActivations.entrySet()) {
-//            int rentTerminalActivations = ;
-//            int customersCreditActivations = ;
-//            int dolyameActivations = ;
-//            int otherActivation = ;
             ArList.add(new Sales(
                     k.getKey(),
                     k.getValue(),
