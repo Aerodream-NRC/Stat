@@ -81,8 +81,6 @@ public class ExcelReader {
                 MapOtherActivations.put(login, 1);
             }
         }
-        System.out.println(MapAllActivations);
-        System.out.println(MapRentTerminalActivations);
         MapOtherActivations.remove("Оператор");
     }
 
