@@ -42,12 +42,16 @@ public class WelcomeController {
     }
 
     private void MainStage() throws IOException {
-        Stage stage = (Stage) StartButton.getScene().getWindow();
-        stage.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(WelcomeApplication.class.getResource("MainMenu.fxml"));
-        Scene Mainscene = new Scene(fxmlLoader.load(), 1280, 720);
-        stage.setTitle("Statistic");
-        stage.setScene(Mainscene);
-        stage.show();
+        try {
+            Stage stage = (Stage) StartButton.getScene().getWindow();
+            stage.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(WelcomeApplication.class.getResource("MainMenu.fxml"));
+            Scene Mainscene = new Scene(fxmlLoader.load(), 1280, 720);
+            stage.setTitle("Statistic");
+            stage.setScene(Mainscene);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
