@@ -28,8 +28,7 @@ public class ExcelReader {
     static TreeMap<String, Integer> MapOtherActivations = new TreeMap<>();
 
     protected static void excelReader() throws IOException {
-        ReportFilePath.replaceAll(" ", "");
-        StringBuilder stringBuilder = new StringBuilder(ReportFilePath);
+        StringBuilder stringBuilder = new StringBuilder(ReportFilePath.replaceAll(" ", ""));
         stringBuilder.delete(0, 6);
         String fileReportPath = stringBuilder.toString();
         Workbook workbook = new XSSFWorkbook(new FileInputStream(fileReportPath));
@@ -84,9 +83,9 @@ public class ExcelReader {
         MapOtherActivations.remove("Оператор");
     }
 
-    public static void loginIterator(TreeMap m) {
+    public static void loginIterator(TreeMap map) {
         for (Map.Entry<String, Integer> l : MapAllActivations.entrySet()) {
-            m.put(l.getKey(), 0);
+            map.put(l.getKey(), 0);
         }
     }
 }
